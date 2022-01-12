@@ -1,0 +1,200 @@
+/*
+Nama: Rafida Zahra Mahirani H
+Kelas: 1B
+Mata Kuliah: Dasar Pemrograman
+Program Studi: Teknik Informatika
+*/
+
+#include <iostream>
+using namespace std;
+int main(void){
+	string namaPasien, alamat;
+	char gender, lanjut, pilih, bayar;
+	int data, umur, waktu, konsultasi, buatJanji, booking, biayaKonsultasi, pertemuan, hasil, tlp, totalBayar;
+	
+	int x = 0;
+	int totalBiaya;
+	
+	cout << "	==============================================================\n";
+	cout << "				BUMI KONSELING \n";
+	cout << "			Kota Tangerang Selatan - Banten \n";
+	cout << "	Email : konselingyuk@gmail.com	Website : www.konseling.go.id \n";
+	cout << "	==============================================================\n";
+	cout << endl;
+	cout << "SELAMAT DATANG DI APLIKASI PELAYANAN BUMI KONSELING \n"; 
+	cout << "Sayangi Kesehatan Mental dan Jiwamu \n";
+	cout << "Untuk mendapatkan pelayanan di Bumi Konseling \t \n";
+	cout << "Anda harus mengisi formulir dibawah ini (wajib) \t \n";
+	cout << "1. Konsultasi \n";
+	cout << "2. Buat Janji \n";
+	
+	do {
+		cout << "Pilih dan Lakukan Pengisian Formulir diatas [1 / 2]:  \n";
+		cin >> data;
+		
+		switch(data)
+		{
+			case 1:
+				system("cls");
+				cout << endl;
+				cout << "No.Konsultasi \n";
+				cout << "1. Gangguan Mental \n";
+				cout << "2. Gangguan Jiwa \n";
+				cout << "Pilihan Anda : [1/2] \n";
+				cin >> konsultasi;
+				cout << endl;
+				
+				if (konsultasi == 1){
+					cout << "\t \tGangguan Mental \n " << endl;
+					cout << "Bagas Farizan Hakim, M.Psi \n";
+					cout << "Psikolog \n";
+					cout << "Biaya konsultasi Rp. 50.000 / 1x Pertemuan \n";
+					cout << "===================================== \n";
+					cout << "silahkan isi Formulir dibawah ini :" << endl;
+					cout << "Nama: ";
+					cin >> namaPasien;
+					cout << "Usia: ";
+					cin >> umur;
+					cout << "Alamat: ";
+					cin >> alamat;
+					cout << "Jenis Kelamin: ";
+					cin >> gender;
+					if (gender == 'L' || gender == 'l'){
+						cout << "Laki - Laki \n";
+					} else if (gender == 'P' || gender == 'p'){
+						cout << "Perempuan \n";
+					} else {
+						cout << endl;
+					}
+				} 
+				else if (konsultasi == 2){
+					cout << "\t \t Gangguan Jiwa " << endl;
+					cout << "Dr. Fahmi Ali Hasyim, SpKJ \n";
+					cout << "Psikiater \n";
+					cout << "Biaya konsultasi Rp. 50.000 / 1x Pertemuan \n";
+					cout << "===================================== \n";
+					cout << "silahkan isi Formulir dibawah ini :" << endl;
+					cout << "Nama:";
+					cin >> namaPasien;
+					cout << "Usia:";
+					cin >> umur;
+					cout << "Alamat:";
+					cin >> alamat;
+					cout << "Jenis Kelamin:";
+					cin >> gender;
+					if (gender == 'L' || gender == 'l'){
+						cout << "Laki - Laki \n";
+					} else if (gender == 'P' || gender == 'p'){
+						cout << "Perempuan \n";
+					} else {
+						cout << endl;
+					}
+				}
+				else {
+					cout << endl;
+				}
+				break;
+			case 2:
+				system("cls");
+				cout << "JADWAL PRAKTEK KLINIK\n";
+				cout << "1. SENIN - KAMIS : 08:00 s/d 20:00 \n";
+				cout << "2. JUMAT : 08:30 s/d 19:00 \n";
+				cout << "3. SABTU - MINGGU : 07:00 s/d 18:00 \n";
+				cout << "Buat Janji sesuai jadwal [1/2/3] \n";
+				cin >> buatJanji;
+				cout << endl;
+				
+				if (buatJanji == 1){
+					cout << "SENIN - KAMIS " << endl;
+					cout << "anda memilih hari ini ? klik 1 sekali lagi untuk membuat janji  \n";
+					cin >> booking;
+					
+					if(booking == 1){
+					cout << "silahkan isi Formulir dibawah ini :" << endl;
+					cout << "Nama:";
+					cin >> namaPasien;
+					cout << "Usia:";
+					cin >> umur;
+					cout << "Alamat:";
+					cin >> alamat;
+					cout << endl;
+						cout << "Selamat anda sudah terdaftar dan membuat janji untuk bertemu dengan psikolog dan psikiater andalan kami \n";
+						cout << "Tunjukkan struk kepada resepsionist sebagai bukti pendaftaran dan melanjutkan ke pembayaran \n";
+					} else {
+						cout << endl;
+					}
+				} else if (buatJanji == 2){
+					cout << "JUMAT" << endl;
+					cout << "anda memilih hari ini ? klik 2 sekali lagi untuk membuat janji \n";
+					cin >> booking;
+					
+					if (booking == 2){
+					cout << "silahkan isi Formulir dibawah ini :" << endl;
+					cout << "Nama:";
+					cin >> namaPasien;
+					cout << "Usia:";
+					cin >> umur;
+					cout << "Alamat:";
+					cin >> alamat;
+					cout << endl;
+						cout << "Selamat anda sudah terdaftar dan membuat janji untuk bertemu dengan psikolog dan psikiater andalan kami \n";
+						cout << "Tunjukkan struk kepada resepsionist sebagai bukti pendaftaran dan melanjutkan ke pembayaran\n";
+					} else {
+						cout << endl;
+					}
+				} else if (buatJanji == 3){
+					cout << "SABTU - MINGGU" << endl;
+					cout << "anda memilih hari ini ? klik 3 sekali lagi untuk membuat janji  \n";
+					cin >> booking;
+					
+					if (booking == 3){
+					cout << "silahkan isi Formulir dibawah ini :" << endl;
+					cout << "Nama:";
+					cin >> namaPasien;
+					cout << "Usia:";
+					cin >> umur;
+					cout << "Alamat:";
+					cin >> alamat;
+					cout << endl;
+						cout << "Selamat anda sudah terdaftar dan membuat janji untuk bertemu psikolog dan psikiater andalan kami \n";
+						cout << "Tunjukkan struk kepada resepsionist sebagai bukti pendaftaran dan melanjutkan ke pembayaran\n";
+					} else {
+						cout << endl;
+					}
+					pertemuan = 50000;
+					totalBiaya = biayaKonsultasi * pertemuan;
+					
+
+				} else {
+					cout << endl;
+				}
+
+				break;
+
+				x++;
+		}
+	}while (bayar == 'y' || bayar == 'Y');
+			cout << endl;
+			cout << "=============== \n";
+			cout << "PEMBAYARAN \n";
+			cout << "=============== \n";
+		
+			cout << "Nama \t: " << namaPasien << endl;
+			cout << "Usia \t: " << umur << "tahun " << endl;
+			cout << "Alamat \t: " << alamat << endl;
+			for (int a = 0; a < x; a++)
+			totalBiaya = 50000;
+			cout << "berapa kali pertemuan = ";
+			cin >> pertemuan;
+			totalBiaya = 50000;
+			hasil = pertemuan * totalBiaya;
+				
+			cout << "Total Harga  : Rp. " << hasil << endl;
+            cout << "Jumlah uang  : Rp. ";
+            cin >> totalBayar;
+            cout << "Kembalian    : Rp. " << totalBayar - hasil<< " " << endl;
+        	cout << "==============================" << endl;
+            cout << "Pembayaran Berhasil, Semangat sembuh. Tetap jaga kesehatan mentalmu ya!!! " << endl;
+            
+    return 0;
+}
